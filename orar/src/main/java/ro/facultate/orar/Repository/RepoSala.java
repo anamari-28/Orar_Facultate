@@ -10,9 +10,9 @@ import java.util.List;
 @Repository
 public interface RepoSala extends JpaRepository<Sala, Integer> {
 
-    Optional<Sala> findByName(String name);
+    Optional<Sala> findByNume(String nume);
 
-    List<Sala> findByBuilding(String cladire);
+    List<Sala> findByCladire(String cladire);
 
-    List<Sala> findByFloor(Integer etaj);
+    List<Sala> findByEtaj(Integer etaj);
 }

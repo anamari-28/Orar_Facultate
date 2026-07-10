@@ -10,11 +10,11 @@ import java.util.List;
 @Repository
 public interface RepoPersoana extends JpaRepository<Persoana, Integer> {
 
-    List<Persoana> findByName(String nume);
+    List<Persoana> findByNume(String nume);
 
-    List<Persoana> findBySurname(String prenume);
+    List<Persoana> findByPrenume(String prenume);
 
-    Optional<Persoana> findByCNP(String cnp);
+    Optional<Persoana> findByCnp(String cnp);
 
-    List<Persoana> findByDad(String initialaTata);
+    List<Persoana> findByInitialaTata(String initialaTata);
 }
