@@ -24,5 +24,5 @@ public class Profesor {
 
     @OneToOne
     @JoinColumn(name = "pers_id", referencedColumnName = "id")
-    private Persoana persoana;
+    private Persoana persId;
 }
