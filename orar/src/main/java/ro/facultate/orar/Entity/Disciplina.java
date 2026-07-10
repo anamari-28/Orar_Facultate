@@ -19,7 +19,11 @@ public class Disciplina {
     @Column(nullable = false)
     private String nume;
 
-    private Integer nrCredite;
+    private Integer credite;
 
-    private String cod;
+    private Integer an;
+
+    private Integer semestru;
+
+    private String abreviere;
 }
