@@ -16,11 +16,13 @@ public class Profesor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private TipProfesor statut;
+
+    private String abreviere;
+
     @OneToOne
-    @JoinColumn(name = "pers_id", nullable = false)
+    @JoinColumn(name = "pers_id", referencedColumnName = "id")
     private Persoana persoana;
-
-    private String gradDidactic;
-
-    private String departament;
 }
