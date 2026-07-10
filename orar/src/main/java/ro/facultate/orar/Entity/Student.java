@@ -21,7 +21,7 @@ public class Student {
     private Persoana persoana;
 
     @Column(name = "numar_matricol", nullable = false, unique = true)
-    private String numar_matricol;
+    private String numarMatricol;
 
     @ManyToOne
     @JoinColumn(name = "grupa_id")
