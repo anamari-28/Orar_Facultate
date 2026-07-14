@@ -10,5 +10,5 @@ import java.util.List;
 @Repository
 public interface RepoGrupa extends JpaRepository<Grupa, Integer>{
 
-    Optional<Grupa> findBynumeGrupa (String nume);
+    List<Grupa> findBynumeGrupa (String nume);
 }
