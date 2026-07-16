@@ -1,5 +1,7 @@
 package ro.facultate.orar.Controller;
 
+import org.springframework.web.bind.annotation.PathVariable;
+import ro.facultate.orar.Entity.Orar;
 import ro.facultate.orar.Entity.Student;
 import ro.facultate.orar.Service.ServiceStudent;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +20,11 @@ public class StudentController {
 
     @GetMapping("/toti")
     public List<Student> getToti() {
-        return serviceStudent.getToatiStudentii();
+        return serviceStudent.getTotiStudentii();
+    }
+
+    @GetMapping("/{studentId}/materii/{ziua}")
+    public List<Orar> getMateriiStudentZi(@PathVariable Integer studentId, @PathVariable String ziua) {
+        return serviceStudent.getOrarStudentZi(studentId, ziua);
     }
 }

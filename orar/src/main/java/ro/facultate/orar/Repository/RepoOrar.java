@@ -24,4 +24,5 @@ public interface RepoOrar extends JpaRepository<Orar, Integer> {
     List<Orar> findBygrupa(Grupa grupa);
     List<Orar> findBydisciplinaId_AndTipDisciplina(Integer disciplinaId, TipDisciplina tipdisciplina);
 
+    List<Orar> findByGrupaIdAndZiua(Integer grupaId, String ziua);
 }
