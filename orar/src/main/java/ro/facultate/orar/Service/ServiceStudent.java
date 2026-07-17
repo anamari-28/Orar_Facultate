@@ -22,11 +22,14 @@ public class ServiceStudent {
     private RepoOrar repoOrar;
 
     public List<Orar> getOrarStudentZi(Integer studentId, String ziua) {
-        Student student = repoStudent.findById(studentId)
-                .orElseThrow(() -> new RuntimeException("Student inexistent"));
+        Student student = repoStudent.findById(studentId).orElseThrow(() -> new RuntimeException("Student inexistent"));
 
         Integer grupaId = student.getGrupa().getId();
 
         return repoOrar.findByGrupaIdAndZiua(grupaId, ziua);
+    }
+
+    public Student adaugaStudent(Student student) {
+        return repoStudent.save(student);
     }
 }
