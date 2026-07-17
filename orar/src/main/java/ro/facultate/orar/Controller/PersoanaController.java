@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ro.facultate.orar.Entity.Persoana;
+import ro.facultate.orar.Service.ServicePersoana;
 
 @RestController
 @RequestMapping("/persoana")
