@@ -1,13 +1,10 @@
 package ro.facultate.orar.Controller;
 
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 import ro.facultate.orar.Entity.Orar;
 import ro.facultate.orar.Entity.Student;
 import ro.facultate.orar.Service.ServiceStudent;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -26,5 +23,10 @@ public class StudentController {
     @GetMapping("/{studentId}/materii/{ziua}")
     public List<Orar> getMateriiStudentZi(@PathVariable Integer studentId, @PathVariable String ziua) {
         return serviceStudent.getOrarStudentZi(studentId, ziua);
+    }
+
+    @PostMapping("/adauga")
+    public Student adaugaStudent(@RequestBody Student student) {
+        return serviceStudent.adaugaStudent(student);
     }
 }
