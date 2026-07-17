@@ -17,6 +17,7 @@ public class ServicePersoana {
     private RepoPersoana repoPersoana;
 
     public Persoana adaugaPersoana(Persoana persoana) {
+
         return repoPersoana.save(persoana);
     }
 }
