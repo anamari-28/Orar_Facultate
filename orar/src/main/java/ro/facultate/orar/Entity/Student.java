@@ -26,4 +26,7 @@ public class Student {
     @ManyToOne
     @JoinColumn(name = "grupa_id")
     private Grupa grupa;
+
+    @Column(nullable = false)
+    private String parola;
 }

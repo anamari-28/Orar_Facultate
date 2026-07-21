@@ -9,5 +9,5 @@ import java.util.Optional;
 @Repository
 public interface RepoStudent extends JpaRepository<Student, Integer> {
 
-    Optional<Student> findByNumarMatricol(Integer numarMatricol);
+    Optional<Student> findByNumarMatricol(String numarMatricol);
 }
