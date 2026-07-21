@@ -23,6 +23,9 @@ public class Student {
     @Column(name = "numar_matricol", nullable = false, unique = true)
     private String numarMatricol;
 
+    @Column
+    private String parola;
+
     @ManyToOne
     @JoinColumn(name = "grupa_id")
     private Grupa grupa;

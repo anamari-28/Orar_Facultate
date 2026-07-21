@@ -29,4 +29,11 @@ public class StudentController {
     public Student adaugaStudent(@RequestBody Student student) {
         return serviceStudent.adaugaStudent(student);
     }
+
+    @PostMapping("/{id}/parola")
+    public Student setParola(@PathVariable Integer id, @RequestBody String parolaNoua)
+    {
+        return serviceStudent.actualizeazaParola(id, parolaNoua);
+    }
+
 }
