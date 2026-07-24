@@ -4,25 +4,25 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "profesor")
+@Table(name = "professor")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Profesor {
+public class Professor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private TipProfesor statut;
+    @Column(name = "status")
+    private ProfessorStatus status;
 
-    private String abreviere;
+    private String abbreviation;
 
-    @OneToOne
-    @JoinColumn(name = "pers_id", referencedColumnName = "id")
-    private Persoana persId;
+    @ManyToOne
+    @JoinColumn(name = "person_id")
+    private Person person;
 }

@@ -4,26 +4,18 @@ import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name = "disciplina")
+@Table(name = "`group`")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Disciplina {
+public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false)
-    private String nume;
-
-    private Integer credite;
-
-    private Integer an;
-
-    private Integer semestru;
-
-    private String abreviere;
+    @Column(name = "group_name")
+    private String groupName;
 }

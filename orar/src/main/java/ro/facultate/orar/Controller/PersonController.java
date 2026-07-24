@@ -5,19 +5,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ro.facultate.orar.Entity.Persoana;
-import ro.facultate.orar.Service.ServicePersoana;
+import ro.facultate.orar.Entity.Person;
+import ro.facultate.orar.Service.ServicePerson;
 
 @RestController
-@RequestMapping("/persoana")
-public class PersoanaController {
+@RequestMapping("/person")
+public class PersonController {
 
     @Autowired
-    private ServicePersoana servicePersoana;
+    private ServicePerson servicePerson;
 
-    @PostMapping("/adauga")
-    public Persoana adaugaPersoana(@RequestBody Persoana persoana)
+    @PostMapping("/add")
+    public Person addPerson(@RequestBody Person person)
     {
-        return servicePersoana.adaugaPersoana(persoana);
+        return servicePerson.addPerson(person);
     }
 }

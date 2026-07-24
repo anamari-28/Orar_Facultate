@@ -16,14 +16,14 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToOne
-    @JoinColumn(name = "pers_id", nullable = false)
-    private Persoana persoana;
-
-    @Column(name = "numar_matricol", nullable = false, unique = true)
-    private String numarMatricol;
+    @Column(name = "student_number")
+    private Integer studentNumber;
 
     @ManyToOne
-    @JoinColumn(name = "grupa_id")
-    private Grupa grupa;
+    @JoinColumn(name = "person_id")
+    private Person person;
+
+    @ManyToOne
+    @JoinColumn(name = "group_id")
+    private Group group;
 }

@@ -2,13 +2,12 @@ package ro.facultate.orar.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import ro.facultate.orar.Entity.Grupa;
+import ro.facultate.orar.Entity.Group;
 
-import java.util.Optional;
 import java.util.List;
 
 @Repository
-public interface RepoGrupa extends JpaRepository<Grupa, Integer>{
+public interface RepoGroup extends JpaRepository<Group, Integer> {
 
-    List<Grupa> findBynumeGrupa (String nume);
+    List<Group> findByGroupName(String groupName);
 }
