@@ -14,7 +14,6 @@ public class ServiceActivity {
     private RepoActivity repoActivity;
 
     public List<Activity> getActivityByGroup(Integer groupId) {
-        // Folosim metoda care aduce TOATE zilele pentru grupa respectivă
         return repoActivity.findByGroup_Id(groupId);
     }
 
